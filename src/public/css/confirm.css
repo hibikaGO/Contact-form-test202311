@@ -1,0 +1,59 @@
+.confirm__content{
+    margin: 0 auto;
+    width: 75%;
+}
+
+.confirm-title{
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.confirm__content{
+    margin: 0 auto;
+}
+
+.confirm__table{
+    width: 100%;
+    border: 1px solid #e0dfde;
+}
+
+.confirm__table-item{
+    height: auto;
+}
+
+.confirm__item-title{
+    padding: 20px 45px;
+    background-color: #baa899;
+    color: #fff;
+    border: 1px solid #e0dfde;
+    width: 30%;
+}
+.confirm__item-text{
+    padding:20px;
+    border: 1px solid #e0dfde;
+    width: 70%;
+}
+
+.confirm__item-text input{
+    border: none;
+    color: #beb1a6;
+}
+
+.confirm__buttons{
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.button-send{
+    border: none;
+    background-color: #82756a;
+    color: #fff;
+    width: 90px;
+    height: 30px;
+    margin: 0 20px;
+}
+
+.correction{
+    color: inherit;
+}

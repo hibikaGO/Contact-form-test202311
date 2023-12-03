@@ -1,0 +1,152 @@
+.contact-form__content{
+    margin:0 auto;
+    width: 60%;
+}
+
+.contact-form-title{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.form__content,
+.form__table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+
+
+.form__group{
+    width: 100%;
+}
+
+.form__group-title{
+    vertical-align: top;
+}
+
+.form__label-required{
+    color: red;
+}
+
+
+.form_name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form__input-first_name,
+.form__input-last_name{
+    width: 45%;
+}
+
+.form__input-first_name input,
+.form__input-last_name input,
+.form__input-email input,
+.form__input-address input,
+.form__input-building input {
+    width:100%;
+    padding: 5px 20px;
+    background-color: #f4f4f4;
+    border: none;
+    height: 30px;
+}
+
+.form__input-gender{
+    display: flex;
+}
+
+.form__input-gender-radio input{
+    display: none;
+}
+
+.form__input-gender-radio label{
+    padding-left: 25px;
+    position: relative;
+}
+
+.form__input-gender-radio label::before{
+    content:"";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #8a7968;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.form__input-gender-radio input:checked + label::before{
+    background-color: #8a7968;
+}
+
+.form__input-gender-radio{
+    margin-right: 60px;
+}
+
+.form__input-tell{
+    display: flex;
+    vertical-align: top;
+    justify-content: space-between;
+}
+
+.form__input-tell-cell{
+    width:30%;
+}
+
+.form__input-tell-cell input {
+    width:100%;
+    text-align: center;
+    padding: 5px;
+    background-color: #f4f4f4;
+    color: #beb1a6;
+    height: 30px;
+    border: none;
+}
+
+.form__input-content{
+    position: relative;
+    width: 50%;
+}
+
+.form__input-content select{
+    width: 100%;
+    border: none;
+    padding: 5px 20px;
+    background-color: #f4f4f4;
+    color: #beb1a6;
+    appearance: none;
+}
+
+.form__input-content::after {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #beb1a6;
+    content: "";
+    position: absolute;
+    right: 9px;
+    top: 10px;
+    width: 0;
+}
+
+.form__input-detail textarea {
+    width:100%;
+    padding: 5px 20px;
+    background-color: #f4f4f4;
+    border: none;
+}
+
+::placeholder{
+    color: #beb1a6;
+}
+
+.form__button{
+    margin: 0 auto;
+    display: block;
+    border: none;
+    background-color: #82756a;
+    color: #fff;
+    width: 120px;
+    height: 30px;
+}

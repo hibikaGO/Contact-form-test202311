@@ -1,0 +1,15 @@
+body{
+    color: #8a7968;
+}
+
+.header__inner{
+    padding: 20px 15px;
+    display: flex;
+    border-bottom: solid 2px #e0DFDE;
+}
+
+.header__title{
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
