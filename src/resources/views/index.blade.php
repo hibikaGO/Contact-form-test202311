@@ -50,13 +50,13 @@
                     <td class="form__group-content">
                         <div class="form__input-gender">
                                 <div class="form__input-gender-radio">
-                                    <input type="radio" id="male" name="gender" value="男性"{{ old('gender') === '男性' ? 'checked' : ''}} checked><label for="male">男性</label>
+                                    <input type="radio" id="male" name="gender" value="1"{{ old('gender') === '男性' ? 'checked' : ''}} checked><label for="male">男性</label>
                                 </div>
                                 <div class="form__input-gender-radio">
-                                    <input type="radio" id="female" name="gender" value="女性"{{old('gender')==='女性' ? 'checked':''}}><label for="female">女性</label>
+                                    <input type="radio" id="female" name="gender" value="2"{{old('gender')==='女性' ? 'checked':''}}><label for="female">女性</label>
                                 </div>
                                 <div class="form__input-gender-radio">
-                                    <input type="radio" id="other" name="gender" value="その他"{{old('gender')==='女性' ? 'checked':''}}><label for="other">その他</label>
+                                    <input type="radio" id="other" name="gender" value="3"{{old('gender')==='女性' ? 'checked':''}}><label for="other">その他</label>
                                 </div>
                         </div>
                     </td>
@@ -160,18 +160,16 @@
                     </td>
                     <td class="form__group-content">
                         <div class="form__input-content">
-                            <select name="content">
+                            <select name="category_id">
                                 <option value="" selected disabled>選択してください</option>
-                                <option value="商品のお届けについて"{{ old('content') === '商品のお届けについて' ? 'selected' : '' }}>商品のお届けについて</option>
-                                <option value="商品の交換について"{{ old('content') === '商品の交換について' ? 'selected' : ''}}>商品の交換について</option>
-                                <option value="商品トラブル"{{ old('content') === '商品トラブル' ? 'selected' : ''}}>商品トラブル</option>
-                                <option value="ショップへのお問い合わせ"{{ old('content') === 'ショップへのお問い合わせ' ? 'selected' : ''}}>ショップへのお問い合わせ</option>
-                                <option value="その他"{{ old('content') === 'その他' ? 'selected' : ''}}>その他</option>
+                                @foreach($categories as $category)
+                                <option value="{{ $category->id }}" @if(old('category_id') == $category->id) selected @endif>{{ $category->content }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </td>
                         <div class="form__error">
-                        @error('content')
+                        @error('category_id')
                         {{ $message }}
                         @enderror
                         </div>

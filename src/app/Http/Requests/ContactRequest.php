@@ -32,7 +32,7 @@ class ContactRequest extends FormRequest
             'tell3'=>['required','max:5'],
             'address'=>'required',
             'detail'=>'required',
-            'content'=>['required','max:120'],
+            'category_id'=>'required',
         ];
     }
     public function messages()
@@ -49,7 +49,7 @@ class ContactRequest extends FormRequest
             'tell3.required'=>'電話番号を入力してください',
             'tell3.max'=>'電話番号は5桁までの数字で入力してください',
             'address.required'=>'住所を入力してください',
-            'content.required'=>'お問い合わせの種類を選択してください',
+            'category_id.required'=>'お問い合わせの種類を選択してください',
             'detail.required'=>'お問い合わせ内容を入力してください',
             'detail.max'=>'お問い合わせ内容は120字以内で入力してください',
 

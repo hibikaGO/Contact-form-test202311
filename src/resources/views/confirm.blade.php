@@ -28,7 +28,7 @@
                         性別
                     </td>
                     <td class="confirm__item-text">
-                        <input type="text" name="gender" value="{{$contact['gender']}}" readonly/>
+                        <input type="text" name="gender" value="{{$contactData['gender']}}" readonly/>
                     </td>
                 </tr>
                 <tr class="confirm__table-item">
@@ -68,7 +68,8 @@
                         お問い合わせの種類
                     </td>
                     <td class="confirm__item-text">
-                        <input type="text" name="content" value="{{$contact['content']}}" readonly/>
+                        {{ $categoryContent }}
+                        <input type="hidden" name="category_id" value="{{$contact['category_id']}}">
                     </td>
                 </tr>
                 <tr class="confirm__table-item">
