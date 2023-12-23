@@ -33,13 +33,13 @@
                         <option value="0">
                             全部
                         </option>
-                        <option value="1"@if($selectedGender === '1') selected @endif>
+                        <option value="1"@if($selectedGender ?? '' === '1') selected @endif>
                             男性
                         </option>
-                        <option value="2"@if($selectedGender === '2') selected @endif>
+                        <option value="2"@if($selectedGender ?? '' === '2') selected @endif>
                             女性
                         </option>
-                        <option value="3"@if($selectedGender === '3') selected @endif>
+                        <option value="3"@if($selectedGender ?? '' === '3') selected @endif>
                             その他
                         </option>
                     </select>
@@ -69,9 +69,13 @@
     </form>
     <div class="content__header">
         <div class="header__export">
-            <form action="" class="form__export">
+            <form action="/export-csv" class="form__export" method="get">
             @csrf
-                <button class="button__export">エクスポート</button>
+                <input type="hidden" name="name_or_email" value="{{ request()->input('name_or_email') }}">
+                <input type="hidden" name="gender" value="{{ request()->input('gender') }}">
+                <input type="hidden" name="content" value="{{ request()->input('content') }}">
+                <input type="hidden" name="created_at" value="{{ request()->input('created_at') }}">
+                <button class="button__export" type="submit" name="export_csv">エクスポート</button>
             </form>
         </div>
         <div class="header__paginate">

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CsvExportController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,7 @@ Route::post('/confirm',[ContactController::class,'confirm']);
 Route::post('/thanks',[ContactController::class,'thanks']);
 Route::get('/admin',[ContactController::class,'admin']);
 Route::get('/admin/filter', [ContactController::class, 'filter']);
+Route::get('/export-csv', [CsvExportController::class,'export']);
 Route::get('/register',[ContactController::class,'register']);
 Route::get('/login',[ContactController::class,'login']);
 
