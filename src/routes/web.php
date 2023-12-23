@@ -19,9 +19,12 @@ use App\Http\Controllers\CsvExportController;
 Route::get('/',[ContactController::class,'index']);
 Route::post('/confirm',[ContactController::class,'confirm']);
 Route::post('/thanks',[ContactController::class,'thanks']);
-Route::get('/admin',[ContactController::class,'admin']);
-Route::get('/admin/filter', [ContactController::class, 'filter']);
+Route::middleware('auth')->group(function () {
+    Route::get('/admin',[ContactController::class,'admin']);
+});
+Route::middleware('auth')->group(function () {
+    Route::get('/admin/filter', [ContactController::class, 'filter']);
+});
 Route::get('/export-csv', [CsvExportController::class,'export']);
-Route::get('/register',[ContactController::class,'register']);
-Route::get('/login',[ContactController::class,'login']);
+Route::post('/logout',[ContactController::class,'logout']);
 

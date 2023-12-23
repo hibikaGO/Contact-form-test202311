@@ -60,7 +60,7 @@ class ContactController extends Controller
         return $contact;
     });
 
-        return view('admin',compact('contacts','categories'));
+        return view('auth.admin',compact('contacts','categories'));
     }
 
     public function filter(Request $request)
@@ -104,21 +104,27 @@ class ContactController extends Controller
         return $contact;
     });
 
-        return view('admin', [
+        return view('auth.admin', [
         'categories' => $categories,
         'contacts' => $searchResults,
         'selectedGender' => $gender,
     ]);
     }
 
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect('auth.login');
+    }
+
     public function register()
     {
-        return view('register');
+        return view('auth.register');
     }
 
     public function login()
     {
-        return view('login');
+        return view('auth.login');
     }
     //
 }

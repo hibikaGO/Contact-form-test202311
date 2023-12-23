@@ -31,6 +31,7 @@
                             </div>
                         </div>
                     </td>
+                </tr>
                     <div class="form__error">
                         @error('first_name')
                         {{ $message }}
@@ -39,7 +40,6 @@
                         {{ $message }}
                         @enderror
                     </div>
-                </tr>
                 <tr class="form__group">
                     <td class="form__group-title">
                             性別
@@ -60,12 +60,12 @@
                                 </div>
                         </div>
                     </td>
-                        <div class="form__error">
-                        @error('gender')
-                        {{ $message }}
-                        @enderror
-                        </div>
                 </tr>
+                    <div class="form__error">
+                    @error('gender')
+                    {{ $message }}
+                    @enderror
+                    </div>
                 <tr class="form__group">
                     <td class="form__group-title">
                             メールアドレス
@@ -78,12 +78,12 @@
                             <input type="email" name="email" placeholder="例:text@sample.com" value="{{ old('email') }}">
                         </div>
                     </td>
-                        <div class="form__error">
-                        @error('email')
-                        {{ $message }}
-                        @enderror
-                        </div>
                 </tr>
+                    <div class="form__error">
+                    @error('email')
+                    {{ $message }}
+                    @enderror
+                    </div>
                 <tr class="form__group">
                     <td class="form__group-title">
                             電話番号
@@ -106,18 +106,18 @@
                             </div>
                         </div>
                     </td>
-                        <div class="form__error">
-                        @error('tell1')
-                        {{ $message }}
-                        @enderror
-                        @error('tell2')
-                        {{ $message }}
-                        @enderror
-                        @error('tell3')
-                        {{ $message }}
-                        @enderror
-                        </div>
                 </tr>
+                    <div class="form__error">
+                    @error('tell1')
+                    {{ $message }}
+                    @enderror
+                    @error('tell2')
+                    {{ $message }}
+                    @enderror
+                    @error('tell3')
+                    {{ $message }}
+                    @enderror
+                    </div>
                 <tr class="form__group">
                     <td class="form__group-title">
                             住所
@@ -130,12 +130,12 @@
                             <input type="text" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" value="{{ old('address') }}">
                         </div>
                     </td>
-                        <div class="form__error">
-                        @error('address')
-                        {{ $message }}
-                        @enderror
-                        </div>
                 </tr>
+                    <div class="form__error">
+                    @error('address')
+                    {{ $message }}
+                    @enderror
+                    </div>
                 <tr class="form__group">
                     <td class="form__group-title">
                             建物名
@@ -145,12 +145,12 @@
                             <input type="text"name="building" placeholder="例:千駄ヶ谷マンション101" value="{{ old('building') }}">
                         </div>
                     </td>
-                        <div class="form__error">
-                        @error('building')
-                        {{ $message }}
-                        @enderror
-                        </div>
                 </tr>
+                    <div class="form__error">
+                    @error('building')
+                    {{ $message }}
+                    @enderror
+                    </div>
                 <tr class="form__group">
                     <td class="form__group-title">
                             お問い合わせの種類
@@ -168,12 +168,12 @@
                             </select>
                         </div>
                     </td>
-                        <div class="form__error">
-                        @error('category_id')
-                        {{ $message }}
-                        @enderror
-                        </div>
                 </tr>
+                    <div class="form__error">
+                    @error('category_id')
+                    {{ $message }}
+                    @enderror
+                        </div>
                 <tr class="form__group">
                     <td class="form__group-title">
                             お問い合わせ内容
@@ -186,12 +186,12 @@
                             <textarea name="detail" cols="51" rows="5" placeholder="お問い合わせ内容をご記載ください" value="{{ old('detail') }}"></textarea>
                         </div>
                     </td>
-                        <div class="form__error">
-                        @error('detail')
-                        {{ $message }}
-                        @enderror
-                        </div>
                 </tr>
+                    <div class="form__error">
+                    @error('detail')
+                    {{ $message }}
+                    @enderror
+                    </div>
             </table>
             <button class="form__button" type="submit">確認画面</button>
             </form>

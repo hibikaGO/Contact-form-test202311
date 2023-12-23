@@ -7,7 +7,10 @@
 
 @section('header')
 <div class="header-button">
-    <button class="button-logout">logout</button>
+    <form action="/logout" method="post">
+    @csrf
+        <button class="button-logout">logout</button>
+    </form>
 </div>
 @endsection
 
